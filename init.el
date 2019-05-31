@@ -1,3 +1,4 @@
+(setq package-check-signature nil)
 (require 'package) ;; You might already have this line
 (let* ((no-ssl (and (memq system-type '(windows-nt ms-dos))
                     (not (gnutls-available-p))))
@@ -22,7 +23,7 @@
  '(linum-format " %5i ")
  '(package-selected-packages
    (quote
-    (ghc haskell-mode jedi company-lua sublime-themes smex slime-company powerline paredit neotree multiple-cursors material-theme magit git-commit expand-region elisp-slime-nav company-quickhelp async popup-complete company-jedi use-package parinfer slime-theme slim-mode common-lisp-snippets slime company-anaconda ac-anaconda anaconda-mode 2048-game ## ac-html ac-cider ac-geiser auto-complete cider clojure-mode elpy julia-shell julia-repl julia-mode chapel-mode elixir-mode geiser racket-mode python-mode)))
+    (company-auctex company-math org-mind-map caml merlin quack chicken-scheme terminal-here inf-clojure rust-mode ruby-tools ruby-test-mode scala-mode scheme-complete extempore-mode ghc haskell-mode jedi company-lua sublime-themes smex slime-company powerline paredit neotree multiple-cursors material-theme magit git-commit expand-region elisp-slime-nav company-quickhelp async popup-complete company-jedi use-package parinfer slime-theme slim-mode common-lisp-snippets slime company-anaconda ac-anaconda anaconda-mode 2048-game ## ac-html ac-cider ac-geiser auto-complete cider clojure-mode elpy julia-shell julia-repl julia-mode chapel-mode elixir-mode geiser racket-mode python-mode)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -116,3 +117,23 @@
  (setq python-shell-interpreter "/home/surya/DL/bin/python"
        python-shell-interpreter-args "-i")
 (add-hook 'inferior-haskell-mode-hook 'turn-on-ghci-completion)
+
+(add-to-list 'load-path "~/Documents/tidal/")
+(require 'haskell-mode)
+(require 'tidal)
+(put 'upcase-region 'disabled nil)
+(put 'downcase-region 'disabled nil)
+
+(load "/home/surya/.opam/4.07.0/share/emacs/site-lisp/tuareg-site-file")
+;; Auto-refresh dired on file change
+(add-hook 'dired-mode-hook 'auto-revert-mode)
+
+(use-package company-math)
+
+(use-package company-auctex
+  :config (progn
+            (add-to-list 'company-backends
+                         '(company-auctex-macros
+                           company-auctex-environments
+                           company-math-symbols-unicode
+                           company-math-symbols-latex))))
