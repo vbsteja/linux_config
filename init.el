@@ -23,7 +23,7 @@
  '(linum-format " %5i ")
  '(package-selected-packages
    (quote
-    (company-auctex company-math org-mind-map caml merlin quack chicken-scheme terminal-here inf-clojure rust-mode ruby-tools ruby-test-mode scala-mode scheme-complete extempore-mode ghc haskell-mode jedi company-lua sublime-themes smex slime-company powerline paredit neotree multiple-cursors material-theme magit git-commit expand-region elisp-slime-nav company-quickhelp async popup-complete company-jedi use-package parinfer slime-theme slim-mode common-lisp-snippets slime company-anaconda ac-anaconda anaconda-mode 2048-game ## ac-html ac-cider ac-geiser auto-complete cider clojure-mode elpy julia-shell julia-repl julia-mode chapel-mode elixir-mode geiser racket-mode python-mode)))
+    (lsp-mode markdown-mode ht dash-functional quelpa company-auctex company-math org-mind-map caml merlin quack chicken-scheme terminal-here inf-clojure rust-mode ruby-tools ruby-test-mode scala-mode scheme-complete extempore-mode ghc haskell-mode jedi company-lua sublime-themes smex slime-company powerline paredit neotree multiple-cursors material-theme magit git-commit expand-region elisp-slime-nav company-quickhelp async popup-complete company-jedi use-package parinfer slime-theme slim-mode common-lisp-snippets slime company-anaconda ac-anaconda anaconda-mode 2048-game ## ac-html ac-cider ac-geiser auto-complete cider clojure-mode elpy julia-shell julia-repl julia-mode chapel-mode elixir-mode geiser racket-mode python-mode)))
  '(vc-annotate-background nil)
  '(vc-annotate-color-map
    (quote
@@ -137,3 +137,5 @@
                            company-auctex-environments
                            company-math-symbols-unicode
                            company-math-symbols-latex))))
+
+
