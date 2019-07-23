@@ -2,13 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH="/home/surya/.oh-my-zsh"
+export ZSH="/home/surya/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="ys"
+ZSH_THEME="ys_custom"
+# ZSH_THEME="kphoen"
+# ZSH_THEME="mortalscumbag"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -26,8 +28,14 @@ ZSH_THEME="ys"
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+# DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -83,9 +91,6 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -103,9 +108,11 @@ alias ai-mc-magenta-activate="source /home/surya/miniconda3/bin/activate magenta
 alias ai-mc-tf-activate="source /home/surya/miniconda3/bin/activate tf"
 alias ai-mc-tor-activate="source /home/surya/miniconda3/bin/activate torch"
 alias ai-mc-mx-activate="source /home/surya/miniconda3/bin/activate mxnet"
-
+alias ai-mc-fastai-activate="source /home/surya/miniconda3/bin/activate fastai"
 # OPAM configuration
 . /home/surya/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 ## LD LIBRARY PATH for guile lib
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/lib/
+
+export PATH=$PATH:/home/surya/.cabal/bin
